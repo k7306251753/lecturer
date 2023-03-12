@@ -34,6 +34,9 @@ private LectUserRepository lectUserRepository;
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		if(true) {
+			System.out.println("i made changes");
+		}
 	        if(user==null) {
 	        	throw new LecturerDublicateException("User not found with username or email:" + usernameOrEmail);
 	        }
