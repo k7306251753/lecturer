@@ -52,8 +52,7 @@ public class LectController {
 	@Autowired
 	
 	private JavaMailSender mailSenderj1;
-	@Autowired
-	private JavaMailSender mailSenderj2;
+	
 	@Autowired
 	private com.lectures.demo.service.OrderService orderService;
 	Logger log = LoggerFactory.getLogger(LecturersApplication.class);
