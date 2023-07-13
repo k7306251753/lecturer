@@ -211,6 +211,13 @@ public class LectController {
 	}
 		
 		
-	
+	//i love you friends
+	@GetMapping("/chechingStoredProcedure34")
+	public ResponseEntity<List<LecturerDetailsEntity>>checkingStoredProcedure2(@RequestParam Integer input){
+		
+		List<LecturerDetailsEntity>list=em.createNamedStoredProcedureQuery("second").setParameter("tlectid", input) .getResultList();
+		
+		return new ResponseEntity<List<LecturerDetailsEntity>>(list, HttpStatus.CREATED);
+	}
 
 }
