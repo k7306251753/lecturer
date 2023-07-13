@@ -18,6 +18,14 @@ public class CovidDataEntity {
 	private String Slug;
 	private Integer NewConfirmed;
 	private Integer TotalConfirmed;
+
+
+
+
+
+
+
+	//i am editing the code online
 	private Integer NewDeaths;
 	private Integer TotalDeaths;
 	private Integer NewRecovered;
