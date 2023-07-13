@@ -202,7 +202,7 @@ public class LectController {
 		return new ResponseEntity<List<LecturerDetailsEntity>>(list, HttpStatus.CREATED);
 	}
 		
-	@GetMapping("/chechingStoredProcedure2")
+	@GetMapping("/chechingStoredProcedure3")
 	public ResponseEntity<List<LecturerDetailsEntity>>checkingStoredProcedure2(@RequestParam Integer input){
 		
 		List<LecturerDetailsEntity>list=em.createNamedStoredProcedureQuery("second").setParameter("tlectid", input) .getResultList();
