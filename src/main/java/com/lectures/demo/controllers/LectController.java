@@ -210,7 +210,25 @@ public class LectController {
 		return new ResponseEntity<List<LecturerDetailsEntity>>(list, HttpStatus.CREATED);
 	}
 		
-		
+		// @EventListener(ApplicationReadyEvent.class)
+	@PostMapping("/mailsender")
+	// @Scheduled(cron = "0/5 * * * * *")
+	public HttpStatus mailSenderWithSchedulerf() {
+
+		String setTo = "k7306251753@gmail.com";
+		SimpleMailMessage message = new SimpleMailMessage();
+		message.setTo("k7306251753@gmail.com");
+		message.setText("we are friends");
+		message.setSubject("we are friends");
+		mailSenderj1.send(message);
+		log.info("mail sededed to" + setTo);
+		// System.out.println("mail send to"+setTo);
+		// @RequestParam String setTo,@RequestParam String setText,@RequestParam String
+		// setSubject
+
+		return HttpStatus.OK;
+
+	}
 	
 
 }
